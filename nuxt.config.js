@@ -4,15 +4,23 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'bmi-calculator',
+    title: 'bmi calculator',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+
+    script: [
+      {
+        src: 'https://kit.fontawesome.com/6af01ebe7d.js',
+        crossorigin: 'anonymous',
+      },
+    ],
   },
 
+  // <script src="https://kit.fontawesome.com/6af01ebe7d.js" crossorigin="anonymous"></script>
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
@@ -20,7 +28,7 @@ export default {
   plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: false,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -37,6 +45,23 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
   ],
+
+  tailwindcss: {
+    config: {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0a0d22',
+            secondary: '#111428',
+            accent: '#e52f68',
+            sign: '#1c1f32',
+            result: '#6fe579',
+            textNorm: '#9e9ea7',
+          },
+        },
+      },
+    },
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
